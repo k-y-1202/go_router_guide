@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router_guide/bottom_navigation_page.dart';
+import 'package:go_router_guide/pages/bottom_navigation_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({
