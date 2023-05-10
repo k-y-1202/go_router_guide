@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:go_router_guide/login_page.dart';
+import 'package:go_router_guide/pages/login_page.dart';
 
 void main() {
   runApp(const MyApp());

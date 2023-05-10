@@ -16,11 +16,12 @@ class LoginPage extends StatelessWidget {
           child: ElevatedButton(
         child: const Text('ログインする'),
         onPressed: () {
-          Navigator.push(
+          Navigator.pushAndRemoveUntil(
             context,
-            MaterialPageRoute(
-              builder: (context) => const BottomNavigationPage(),
-            ),
+            MaterialPageRoute(builder: (context) {
+              return const BottomNavigationPage();
+            }),
+            (_) => false,
           );
         },
       )),

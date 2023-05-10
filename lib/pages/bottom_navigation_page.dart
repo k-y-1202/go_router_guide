@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:go_router_guide/home_page.dart';
-import 'package:go_router_guide/my_page.dart';
+import 'package:go_router_guide/pages/home_page.dart';
+
+import 'my_page.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   const BottomNavigationPage({super.key});
