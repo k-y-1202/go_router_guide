@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:go_router_guide/pages/profile_edit_page.dart';
 
 class MyPage extends StatelessWidget {
@@ -6,6 +7,7 @@ class MyPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const userId = '123abc';
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -16,11 +18,10 @@ class MyPage extends StatelessWidget {
           const SizedBox(height: 30),
           ElevatedButton(
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context) {
-                  return const ProfileEditPage(userId: 'aiueo1234');
-                },
-              ));
+              context.push(
+                '/mypage/edit/$userId',
+                extra: userId,
+              );
             },
             child: const Text('プロフィール編集'),
           ),

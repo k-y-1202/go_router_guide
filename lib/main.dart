@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router_guide/app_router.dart';
 import 'package:go_router_guide/pages/login_page.dart';
 
 void main() {
@@ -10,12 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+    return MaterialApp.router(
+      routerConfig: AppRouter.appRouter,
       debugShowCheckedModeBanner: false,
-      home: const LoginPage(),
     );
   }
 }
