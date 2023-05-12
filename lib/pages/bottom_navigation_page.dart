@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:go_router_guide/router/router_utils.dart';
 
 class BottomNavigationPage extends StatefulWidget {
   const BottomNavigationPage({super.key, required this.body});
@@ -25,10 +26,10 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
           switch (index) {
             case 0:
-              context.go('/home');
+              context.go(APP_PAGE.home.toPath);
               break;
             case 1:
-              context.go('/mypage');
+              context.go(APP_PAGE.mypage.toPath);
               break;
           }
         },
@@ -42,10 +43,10 @@ class _BottomNavigationPageState extends State<BottomNavigationPage> {
 
   int getCurrentIndex() {
     final String location = GoRouterState.of(context).location;
-    if (location.startsWith('/home')) {
+    if (location.startsWith(APP_PAGE.home.toPath)) {
       return 0;
     }
-    if (location.startsWith('/mypage')) {
+    if (location.startsWith(APP_PAGE.mypage.toPath)) {
       return 1;
     }
     return 0;

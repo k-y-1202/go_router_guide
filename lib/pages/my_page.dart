@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:go_router_guide/pages/profile_edit_page.dart';
+
+import '../router/router_utils.dart';
 
 class MyPage extends StatelessWidget {
   const MyPage({super.key});
@@ -19,7 +20,7 @@ class MyPage extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               context.push(
-                '/mypage/edit/$userId',
+                APP_PAGE.mypageEdit.toPath,
                 extra: userId,
               );
             },
